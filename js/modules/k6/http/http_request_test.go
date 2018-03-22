@@ -98,7 +98,7 @@ func TestRequestAndBatch(t *testing.T) {
 	httpbinSrv := httptest.NewServer(httpbin.NewHTTPBin().Handler())
 	defer httpbinSrv.Close()
 
-	ntlmServer := newNTLMServer("bob", "pass")
+	ntlmServer := httptest.NewServer(http.HandlerFunc(ntlmHandler("bob", "pass")))
 	defer ntlmServer.Close()
 
 	root, err := lib.NewGroup("", nil)
