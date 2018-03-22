@@ -54,7 +54,7 @@ Thanks to @cstyan for their work on this!
 
 **Docs**: [Request information](https://docs.k6.io/v1.0/docs/response-k6http)
 
-### k6/http: Support for NTLM Authentication (#533)
+### k6/http: Support for NTLM Authentication (#556)
 
 ```js
 import http from "k6/http";
